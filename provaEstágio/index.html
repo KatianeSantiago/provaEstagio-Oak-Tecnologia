@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<title>Cadastro e Listagem de Produtos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+
+<div id="conteudo">
+    <div id="formularioContainer">
+        <h2>Cadastrar Novo Produto</h2>
+        <form id="cadastroForm">
+            <label for="nomeProduto">Nome do Produto:</label><br>
+            <input type="text" id="nomeProduto" name="nomeProduto" required><br>
+            
+            <label for="descricaoProduto">Descrição do Produto:</label><br>
+            <textarea id="descricaoProduto" name="descricaoProduto" required></textarea><br>
+            
+            <label for="valorProduto">Valor do Produto:</label><br>
+            <input type="text" id="valorProduto" name="valorProduto" required pattern="^\d+(,\d{2})?$"><br>
+            
+            <label for="disponibilidade">Disponível para Venda:</label><br>
+            <select id="disponibilidade" name="disponibilidade" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select><br><br>
+            
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+    </div>
+
+    <div id="listaProdutos">
+        <h2>Listagem de Produtos</h2>
+        <ul id="produtosList">
+            <!-- Os produtos cadastrados serão listados aqui -->
+        </ul>
+        <button id="btnCadastrar">Cadastrar Novo Produto</button>
+    </div>
+</div>
+
+<script src="funçoes.js"></script>
+
+</body>
+</html>
+
+
